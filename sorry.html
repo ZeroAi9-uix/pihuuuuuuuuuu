@@ -226,7 +226,7 @@
         .gif-container img {
             width: 100%;
             height: 100%;
-            object-fit: cubic-bezier; /* Yeh property GIF ko pure box me perfectly fit rakhegi */
+            object-fit: cubic-bezier; 
         }
     </style>
     <!-- Cute Font -->
@@ -234,12 +234,8 @@
 </head>
 <body>
 
-    <!-- ======================================================== -->
-    <!-- CUSTOM AUDIO: Apne gaane ka naam ya link neeche src me daal do -->
-    <!-- ======================================================== -->
     <audio id="bgMusic" loop>
         <source src="cat.mp3" type="audio/mp3"> 
-        <!-- Tip: Agar file isi folder me hai toh bas file ka naam likho jaise src="song.mp3" -->
     </audio>
 
     <!-- Interactive Background Elements -->
@@ -273,8 +269,14 @@
             <p>Maaf kar do ma'am, aage se pakka dhayan rakhunga 💝</p>
         </div>
 
-        <!-- Page 5: End Page -->
+        <!-- Naya Page 5 (Jo pehle 4 aur 5 ke beech pucha tha) -->
         <div class="page" id="p5">
+            <div class="emoji-3d">🏠🔨</div>
+            <p>Yarr ghar me kam laga h background me bhut noice aa raha h raat tak mera voice message mel jaye ga .....🥲</p>
+        </div>
+
+        <!-- Page 6: End Page (Pehle ye p5 tha) -->
+        <div class="page" id="p6">
             <div class="emoji-3d">✨</div>
             <p>Agar maaf kar diye ho toh firr message karna ...🙂</p>
             <p style="font-size: 16px; margin-top: 15px; color: #7d636a; background: rgba(255,255,255,0.4); padding: 10px; border-radius: 15px;">
@@ -287,13 +289,10 @@
         <!-- Hidden Final Celebration Page Triggered by Button -->
         <div class="page" id="pCelebration">
             <div class="gif-container">
-                <!-- ======================================================== -->
-                <!-- CUSTOM GIF: Apni gif file ka naam ya link neeche src me dalo -->
-                <!-- ======================================================== -->
                 <img src="cool-fun.gif" alt="Celebration GIF">
             </div>
             <h1 style="color: #2ec4b6; text-shadow: 2px 2px 0px #ffffff, 4px 4px 0px #cbf3f0;">Yayyyy! 🎉</h1>
-            <p style="color: #2b5c58; font-weight: 700;">gussa khatam!! hone ke baad Abb voice message mel jata tho .....😋</p>
+            <p style="color: #2b5c58; font-weight: 700;">agar gussa khatam hogya!! ho tho  abb voice message mel jata tho .....😋</p>
             <div class="signature" style="color: #2ec4b6;">~RAJ</div>
         </div>
 
@@ -306,6 +305,7 @@
                 <div class="lollipop"></div>
                 <div class="lollipop"></div>
                 <div class="lollipop"></div>
+                <div class="lollipop"></div>
             </div>
             <button id="nxtBtn" class="btn-next" onclick="navigate(1)">Next</button>
         </div>
@@ -313,7 +313,7 @@
 
     <script>
         let currentIdx = 1;
-        const maxPages = 5;
+        const maxPages = 6; // Total pages 5 se badhakar 6 kar di hain
         const card = document.getElementById('mainCard');
         const bgMusic = document.getElementById('bgMusic');
 
